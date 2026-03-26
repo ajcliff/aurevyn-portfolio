@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Neurox AI</title>
+
+<style>
+
+/* RESET */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* BODY */
+body {
+    font-family: "Segoe UI", sans-serif;
+    background: #050505;
+    color: white;
+}
+
+/* NAV */
+nav {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    padding: 20px 8%;
+    display: flex;
+    justify-content: space-between;
+    background: rgba(0,0,0,0.8);
+    backdrop-filter: blur(10px);
+    z-index: 1000;
+}
+
+nav a {
+    margin-left: 20px;
+    color: #00f7ff;
+    text-decoration: none;
+}
+
+/* HERO */
+.hero {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    padding: 0 8%;
+}
+
+.hero h1 {
+    font-size: 70px;
+    color: #00f7ff;
+    text-shadow: 0 0 20px #00f7ff;
+}
+
+.hero p {
+    margin: 20px 0;
+    font-size: 20px;
+}
+
+/* BUTTON */
+.btn {
+    padding: 12px 25px;
+    background: #00f7ff;
+    color: black;
+    text-decoration: none;
+    border-radius: 6px;
+    box-shadow: 0 0 10px #00f7ff;
+}
+
+/* SECTIONS */
+section {
+    padding: 100px 8%;
+    opacity: 0;
+    transform: translateY(50px);
+    transition: 0.7s;
+}
+
+section.active {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* GRID */
+.grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+/* CARDS */
+.card {
+    background: #0d0d0d;
+    padding: 25px;
+    border-radius: 10px;
+    border: 1px solid #00f7ff20;
+    transition: 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 0 20px #00f7ff40;
+}
+
+/* TERMINAL */
+.terminal {
+    background: black;
+    padding: 20px;
+    border-radius: 10px;
+    font-family: monospace;
+    color: #00ff88;
+}
+
+/* CONTACT */
+.contact {
+    text-align: center;
+}
+
+input, textarea {
+    width: 100%;
+    max-width: 500px;
+    padding: 15px;
+    margin: 10px auto;
+    display: block;
+    background: #111;
+    border: none;
+    color: white;
+}
+
+/* MOBILE */
+@media(max-width:768px){
+    .grid {
+        grid-template-columns: 1fr;
+    }
+
+    .hero h1 {
+        font-size: 40px;
+    }
+}
+
+</style>
+</head>
+
+<body>
+
+<!-- NAV -->
+<nav>
+    <div><strong>NEUROX AI</strong></div>
+    <div>
+        <a href="#hero">Home</a>
+        <a href="#features">Features</a>
+        <a href="#system">System</a>
+        <a href="#contact">Contact</a>
+    </div>
+</nav>
+
+<!-- HERO -->
+<section class="hero" id="hero">
+    <div>
+        <h1>Next Generation Intelligence</h1>
+        <p>AI systems built for the future</p>
+        <a href="#features" class="btn">Explore</a>
+    </div>
+</section>
+
+<!-- FEATURES -->
+<section id="features">
+    <h2>Core Capabilities</h2>
+
+    <div class="grid">
+        <div class="card">
+            <h3>Neural Processing</h3>
+            <p>Advanced AI computation and pattern recognition.</p>
+        </div>
+
+        <div class="card">
+            <h3>Automation</h3>
+            <p>Automate workflows and business systems.</p>
+        </div>
+
+        <div class="card">
+            <h3>Prediction Engine</h3>
+            <p>Data-driven decision making in real-time.</p>
+        </div>
+    </div>
+</section>
+
+<!-- SYSTEM -->
+<section id="system">
+    <h2>System Interface</h2>
+
+    <div class="terminal">
+        > Initializing Neurox AI...<br>
+        > Loading neural modules...<br>
+        > System ready.<br>
+        > Awaiting input...
+    </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact" class="contact">
+    <h2>Connect with Neurox</h2>
+    <p>Build intelligent systems with us</p>
+
+    <input placeholder="Your Name">
+    <input placeholder="Email">
+    <textarea placeholder="Project details"></textarea>
+
+    <a class="btn">Send Request</a>
+</section>
+
+<script>
+const sections = document.querySelectorAll("section");
+
+window.addEventListener("scroll", () => {
+    sections.forEach(section => {
+        const top = section.getBoundingClientRect().top;
+        if (top < window.innerHeight - 100) {
+            section.classList.add("active");
+        }
+    });
+});
+</script>
+
+</body>
+</html>

@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+<title>Explore Africa Travel</title>
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<style>
+
+body{
+margin:0;
+font-family:Arial;
+background:#0b1f3b;
+color:white;
+}
+
+/* HEADER */
+
+header{
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:20px;
+background:#06101f;
+}
+
+nav a{
+color:white;
+text-decoration:none;
+margin-left:20px;
+}
+
+nav a:hover{
+color:gold;
+}
+
+/* HERO */
+
+.hero{
+height:90vh;
+display:flex;
+flex-direction:column;
+justify-content:center;
+align-items:center;
+text-align:center;
+background:url("images/safari.jpg") center/cover no-repeat;
+}
+
+.hero h1{
+font-size:55px;
+margin:0;
+}
+
+.hero p{
+font-size:20px;
+margin:15px 0;
+}
+
+.btn{
+background:gold;
+color:black;
+padding:12px 25px;
+text-decoration:none;
+border-radius:6px;
+}
+
+/* SECTIONS */
+
+section{
+padding:70px 30px;
+}
+
+.section-title{
+text-align:center;
+font-size:35px;
+margin-bottom:40px;
+}
+
+/* DESTINATIONS */
+
+.cards{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:25px;
+}
+
+.card{
+background:#132a52;
+border-radius:10px;
+overflow:hidden;
+}
+
+.card img{
+width:100%;
+height:200px;
+object-fit:cover;
+}
+
+.card h3{
+padding:15px;
+margin:0;
+}
+
+.card p{
+padding:0 15px 20px 15px;
+}
+
+/* GALLERY */
+
+.gallery{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:20px;
+}
+
+.gallery img{
+width:100%;
+height:200px;
+object-fit:cover;
+border-radius:10px;
+}
+
+/* TESTIMONIALS */
+
+.testimonials{
+max-width:800px;
+margin:auto;
+text-align:center;
+}
+
+.testimonial{
+background:#132a52;
+padding:25px;
+margin-bottom:20px;
+border-radius:10px;
+}
+
+/* FOOTER */
+
+footer{
+background:#06101f;
+text-align:center;
+padding:25px;
+}
+
+/* MOBILE */
+
+@media(max-width:768px){
+
+.hero h1{
+font-size:35px;
+}
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<header>
+
+<h2>Explore Africa</h2>
+
+<nav>
+<a href="exploreafrica.html">Home</a>
+<a href="destination.html">Destinations</a>
+<a href="packages.html">Packages</a>
+<a href="book.html">Book Trip</a>
+</nav>
+
+</header>
+
+
+<section class="hero">
+
+<h1>Discover Africa</h1>
+
+<p>Luxury safaris and unforgettable travel experiences</p>
+
+<a href="book.html" class="btn">Book Your Adventure</a>
+
+</section>
+
+<section>
+
+<h2 class="section-title">Top Destinations</h2>
+
+<div class="cards">
+
+<div class="card">
+<img src="images/kilimanjaro.jpg">
+<h3>Mount Kilimanjaro</h3>
+<p>Climb Africa’s tallest mountain and experience breathtaking views.</p>
+</div>
+
+<div class="card">
+<img src="images/zanzibar.jpg">
+<h3>Zanzibar Island</h3>
+<p>Relax on beautiful beaches with crystal clear waters.</p>
+</div>
+
+<div class="card">
+<img src="images/wildlife.jpg">
+<h3>Serengeti Safari</h3>
+<p>See elephants, lions and wildlife in their natural habitat.</p>
+</div>
+
+</div>
+
+</section>
+
+<section>
+
+<h2 class="section-title">Travel Gallery</h2>
+
+<div class="gallery">
+
+<img src="images/safari.jpg">
+<img src="images/zanzibar.jpg">
+<img src="images/kilimanjaro.jpg">
+<img src="images/wildlife.jpg">
+
+</div>
+
+</section>
+
+<section>
+
+<h2 class="section-title">What Travelers Say</h2>
+
+<div class="testimonials">
+
+<div class="testimonial">
+"The best safari experience of my life!" – Sarah M.
+</div>
+
+<div class="testimonial">
+"Amazing guides and incredible destinations." – James K.
+</div>
+
+<div class="testimonial">
+"Africa has never looked this beautiful." – Lina R.
+</div>
+
+</div>
+
+</section>
+
+<section style="text-align:center">
+
+<h2>Ready For Your African Adventure?</h2>
+
+<br>
+
+<a href="book.html" class="btn">Start Planning</a>
+
+</section>
+
+<footer>
+
+<p>© 2026 Explore Africa Travel</p>
+
+</footer>
+
+</body>
+
+</html>

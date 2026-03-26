@@ -1,0 +1,464 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Segoe UI", sans-serif;
+    background: #0b0b0b;
+    color: white;
+    line-height: 1.6;
+}
+
+/* NAVBAR */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 8%;
+    position: sticky;
+    top: 0;
+    background: rgba(0,0,0,0.7);
+    backdrop-filter: blur(10px);
+}
+
+.logo img {
+    height: 42px; /* FINAL PERFECT SIZE */
+    width: auto;
+}
+
+/* NAV LINKS */
+nav a {
+    margin-left: 25px;
+    text-decoration: none;
+    color: white;
+    font-size: 18px;
+    position: relative;
+}
+
+nav a::after {
+    content: "";
+    width: 0%;
+    height: 2px;
+    background: #d4af37;
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    transition: 0.3s;
+}
+
+nav a:hover::after {
+    width: 100%;
+}
+
+/* HERO */
+.hero {
+    height: 100vh;
+    position: relative;
+}
+
+.hero-bg {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0.35;
+}
+
+.hero-content {
+    position: absolute;
+    top: 50%;
+    left: 8%;
+    transform: translateY(-50%);
+    max-width: 600px;
+}
+
+.hero h1 {
+    font-size: 60px;
+    margin-bottom: 20px;
+}
+
+.hero p {
+    font-size: 20px;
+    margin-bottom: 30px;
+}
+
+.btn {
+    background: #d4af37;
+    color: black;
+    padding: 12px 25px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* SECTIONS */
+.section {
+    padding: 80px 8%;
+}
+
+.white {
+    background: grey;
+    color: black;
+}
+
+/* LAYOUT */
+.container {
+    max-width: 1200px;
+    margin: auto;
+}
+
+.two-col {
+    display: flex;
+    gap: 50px;
+    align-items: center;
+}
+
+.two-col img {
+    width: 100%;
+}
+
+/* GRID */
+.grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+    margin-top: 40px;
+}
+
+/* CARD */
+.card img {
+    width: 100%;
+}
+
+.card {
+    background: #111;
+    padding: 20px;
+}
+
+/* FOOTER */
+footer {
+    text-align: center;
+    padding: 30px;
+}
+
+/* MOBILE */
+@media(max-width:768px){
+
+    body {
+        font-size: 18px;
+    }
+
+    .hero h1 {
+        font-size: 38px;
+    }
+
+    .hero p {
+        font-size: 18px;
+    }
+
+    h2 {
+        font-size: 26px;
+    }
+
+    p {
+        font-size: 17px;
+    }
+
+    nav a {
+        font-size: 16px;
+    }
+
+    .two-col {
+        flex-direction: column;
+    }
+
+    .grid {
+        grid-template-columns: 1fr;
+    }
+
+    .card p {
+        font-size: 16px;
+    }
+
+    .logo img {
+        height: 35px;
+    }
+
+    /* CONTACT PAGE FIX */
+    .contact-section {
+        text-align: center;
+    }
+
+    .contact-form {
+        max-width: 90%;
+        margin: 30px auto;
+    }
+
+    .contact-form input,
+    .contact-form textarea {
+        text-align: center;
+        padding: 16px;
+        font-size: 16px;
+    }
+}
+/* IMAGE CARDS */
+.image-card {
+    overflow: hidden;
+    border-radius: 10px;
+}
+
+.image-card img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+}
+
+/* GENERAL CARD IMPROVEMENT */
+.card {
+    background: #111;
+    padding: 15px;
+    border-radius: 10px;
+    transition: 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+/* GRID IMAGE FIX */
+.grid img {
+    height: 250px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+/* CONTACT FORM */
+.contact-form {
+    max-width: 600px;
+    margin-top: 30px;
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    padding: 15px;
+    margin-bottom: 15px;
+    border: none;
+    background: #111;
+    color: white;
+}
+
+.contact-form textarea {
+    height: 150px;
+}
+/* BUTTON HOVER */
+.btn {
+    background: #d4af37;
+    transition: 0.3s;
+}
+
+.btn:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 15px #d4af37;
+}
+
+/* CARD HOVER */
+.card:hover img {
+    transform: scale(1.05);
+}
+
+.card img {
+    transition: 0.4s;
+}
+
+/* FADE IN */
+.card {
+    opacity: 1;
+    transform: translateY(0);
+}
+.about-card {
+    background: rgb(12, 2, 36);
+    color: rgb(21, 72, 160);
+    padding: 40px;
+    border-radius: 12px;
+}
+.white-card {
+    background: white;
+    color: black;
+}
+.contact-info {
+    margin-top: 30px;
+    font-size: 18px;
+}
+h2 {
+    margin-top: 30px;
+    font-size: 28px;
+}
+.form-note {
+    margin-top: 10px;
+    font-size: 14px;
+    opacity: 0.7;
+}
+.success-message {
+    display: none;
+    color: #d4af37;
+    margin-top: 10px;
+}
+.card {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+}
+
+.card-content {
+    padding-top: 15px;
+}
+
+.card-content .btn {
+    display: inline-block;
+    margin-top: 10px;
+}
+.card {
+    background: #d47474;
+    padding: 20px;
+    border-radius: 12px;
+    overflow: hidden;
+}
+
+.card img {
+    filter: brightness(0.85);
+}
+.card {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.card-content {
+    margin-top: 15px;
+}
+
+.card-content p {
+    font-size: 15px;
+    opacity: 0.8;
+}
+
+.card-content .btn {
+    margin-top: 10px;
+}
+.lightbox img {
+    animation: zoomIn 0.3s ease;
+}
+
+@keyframes zoomIn {
+    from { transform: scale(0.8); opacity: 0; }
+    to { transform: scale(1); opacity: 1; }
+}
+/* LIGHTBOX */
+.lightbox {
+    display: none;
+    position: fixed;
+    z-index: 999;
+    padding-top: 60px;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.9);
+}
+
+.lightbox img {
+    margin: auto;
+    display: block;
+    max-width: 80%;
+    max-height: 80%;
+    border-radius: 10px;
+}
+
+.close {
+    position: absolute;
+    top: 20px;
+    right: 40px;
+    font-size: 40px;
+    color: white;
+    cursor: pointer;
+}
+html {
+    scroll-behavior: smooth;
+}
+
+.btn {
+    background: #d4af37;
+    color: black;
+    padding: 12px 25px;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 8px !important;
+    display: inline-block;
+}
+.card:hover {
+    box-shadow: 0 0 20px rgba(212,175,55,0.3);
+}
+.card:hover {
+    box-shadow: 0 0 20px rgba(212,175,55,0.3);
+}
+.contact-section {
+    text-align: center;
+}
+
+.contact-form {
+    max-width: 500px;
+    margin: 30px auto;
+}
+
+.contact-form input,
+.contact-form textarea {
+    text-align: center;
+    border-radius: 6px;
+}
+
+.contact-info {
+    text-align: center;
+}
+.contact-form input,
+.contact-form textarea {
+    padding: 18px;
+}
+@media(max-width:768px){
+
+    body {
+        font-size: 18px !important;
+    }
+
+    h1 {
+        font-size: 36px !important;
+    }
+
+    h2 {
+        font-size: 28px !important;
+    }
+
+    h3 {
+        font-size: 22px !important;
+    }
+
+    p {
+        font-size: 18px !important;
+    }
+
+    input, textarea {
+        font-size: 18px !important;
+    }
+
+    .card p {
+        font-size: 17px !important;
+    }
+
+    nav a {
+        font-size: 17px !important;
+    }
+}
+/* NEW STYLES BELOW (applies everywhere) */
+p {
+    line-height: 1.8;
+}
